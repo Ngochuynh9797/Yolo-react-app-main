@@ -1,0 +1,29 @@
+$main-bg: #fff;
+$main-color: #4267b2;
+$text-main-color:#000;
+$text-second-color: #8d8d8d ;
+$text-white: #fff ;
+
+ $btn-main-bg: $main-color;
+ $btn-main-color: #fff;
+
+ $header-height: 150px;
+ $header-tablet-height: 140px;
+ $header-mobile-height: 40px;
+ $header-shrink-height: 70px;
+
+ $box-shadow: rgba(149, 157, 165, .2) 0px 8px 24px;
+
+ $colors: (
+     'blue':#4267b2,
+     'orange':#fbb96b,
+     'pink':#fe7e73,
+     'white':#fff,
+     'black':#000,
+     'main':$main-color
+ );
+
+ $mobile-width: 600px;
+ $tablet-width: 1024px;
+
+ $numbers: (o,1,2,4,5,6,7,8)

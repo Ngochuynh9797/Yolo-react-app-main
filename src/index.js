@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Layout from './components/Layout.jsx';
+import './assest/boxicons-2.0.7/css/boxicons.min.css'
+import './sass/index.scss';
+import {BrowserRouter} from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+        <Layout />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
