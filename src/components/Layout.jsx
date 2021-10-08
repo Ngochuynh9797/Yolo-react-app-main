@@ -2,6 +2,7 @@ import React from 'react';
 import Routes from '../routes/Routes';
 import Header from './Header';
 import Footer from './Footer';
+import ProductViewModal from './ProductViewModal';
 
  const Layout = () => {
      return (
@@ -13,6 +14,7 @@ import Footer from './Footer';
                         </div>
                     </div>
                 <Footer />
+                <ProductViewModal />
             </div>
      )
  };

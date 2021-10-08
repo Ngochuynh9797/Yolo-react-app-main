@@ -4,12 +4,16 @@ import reportWebVitals from './reportWebVitals';
 import Layout from './components/Layout.jsx';
 import './assest/boxicons-2.0.7/css/boxicons.min.css'
 import './sass/index.scss';
-import {BrowserRouter} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
+import { store } from './redux/store'
+import { Provider } from 'react-redux'
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+      <Provider store={store}>
         <Layout />
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

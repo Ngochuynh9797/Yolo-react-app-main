@@ -1,0 +1,36 @@
+.custom-checkbox {
+    @include flex(center, flex-start);
+    
+
+    input {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+        cursor: pointer;
+    }
+
+    &__checkmark {
+        margin-right: 10px;
+        height: 15px;
+        width: 15px;
+        border: 1px solid $text-second-color;
+
+        i {
+            transform: scale(0);
+            transition: transform .3s ease;
+        }
+    }
+
+    input:checked ~ &__checkmark {
+        background-color: $main-color;
+        border: 1px solid $main-color;
+        color: $text-white;
+
+        i {
+            transform: scale(1);
+        }
+    }
+
+    
+}

@@ -3,9 +3,12 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import Button from './button'
 import {numberWithCommas } from '../utils/numberWithCommas'
+import {useDispatch} from 'react-redux'
+import {set} from '../redux/product-modal/product-modal-slice'
 
 
 const ProductCard = props => {
+    const dispatch = useDispatch()
     return (
         <div className="product-card">
             <Link to= {`/catalog/${props.slug}`}>
@@ -26,6 +29,7 @@ const ProductCard = props => {
                     size="small"
                     animate={true}
                     icon='bx bx-cart'
+                    onclick={()=> dispatch(set(props.slug))}
                 >
                     Chọn mua
                 </Button>

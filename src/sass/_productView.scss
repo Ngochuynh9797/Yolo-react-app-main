@@ -1,0 +1,174 @@
+.product {
+    @include flex(flex-start, flex-start);
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    &__images {
+        @include flex (flex-start,flex-start);
+        width: 60%;
+        flex-wrap: wrap;
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+        &__list{    
+            width: 20%;
+            &__item {
+                cursor: pointer;
+            }
+        }
+       
+        &__main {
+            flex-grow: 1;
+            position: relative;
+            padding-top: 100%;
+             img {
+                 position:absolute;
+                 top: 0;
+                 left:50%;
+                 height: 100%;
+                 transform: translateX(-50%)
+             }
+        }
+    }
+
+    &__desc {
+        width: 100%;
+        position: relative;
+        padding: 2rem 2rem 3rem;
+        height: 400px;
+        overflow:hidden;
+        transition: height .3s linear;
+        @include mobile {
+            display: none;
+        }
+        &.expand {
+            height: max-content;
+        }
+
+        &.mobile {
+            display: none;  
+
+            @include mobile {
+                display: block;
+            }
+        }
+
+        &__title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2rem 0;
+        }
+
+        &__content {
+            font-size: 1.5rem;
+            line-height: 1.875rem;
+            text-align: justify;
+
+        }
+        &__toggle {
+            position:absolute;
+            bottom:0;
+            left:50%;
+            transform: translateX(-50%);
+        }
+    }
+     
+    &__info {
+        flex-grow: 1;
+        position: sticky;
+        top:$header-shrink-height;
+        padding-top:2rem; 
+
+        @include mobile {
+            position: relative;
+            top: unset;
+        }
+
+        &__title {
+            font-size: 2.5rem;
+            font-weight: normal;
+        }
+
+        &__item {
+            margin-top: 2rem;
+
+            &__price {
+                color:$main-color;
+                font-size: 2rem;
+                font-weight: 600;
+            }
+
+            &__title {
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            &__list {
+                @include flex(center, flex-start);
+                &__item {
+
+                    &.active {
+                        border-color: $main-color;
+                        box-shadow: $box-shadow;
+                    }
+                    @include flex(center, center);
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border: 2px solid $text-second-color;
+                    margin-right: 1rem;
+                    cursor: pointer;
+                    .circle {
+                        width: 80%;
+                        height: 80%;
+                        border-radius: inherit;
+                        border: 2px solid $text-second-color;
+                        @include flex(center, center);
+                        span {
+                            font-size: 1.5rem;
+                            text-transform: uppercase;
+                        }
+                    }
+                    &:hover {
+                        border-color: $main-color;
+                    }
+                }
+            }
+
+            &__quantity {
+                @include flex(flex-start, flex-start);
+                &__btn {
+                    @include flex(center,center);
+                    width: 30px;
+                    height: 30px;
+                    border: 2px solid $text-main-color;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+
+                &__input {
+                    @include flex(center, center);
+                    font-size:1.5rem;
+                    width: 90px;
+                    height: 30px;
+                    border-top: 1px solid $text-main-color;
+                    border-bottom: 1px solid $text-main-color;
+                   
+                }
+            }
+
+            button {
+                margin-right: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}  

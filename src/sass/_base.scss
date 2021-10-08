@@ -12,6 +12,9 @@
 
 html {
     font-size: 13px;
+    @include mobile { 
+        font-size: 11px;
+    }
 }
 
 body {
@@ -72,7 +75,7 @@ img {
 .container {
     width: 100%;
     max-width: 1620px;
-    padding: 0 50px;
+    padding: 20px 50px;
     margin: 0 auto;
      @include tablet {
          padding: 0 20px;
