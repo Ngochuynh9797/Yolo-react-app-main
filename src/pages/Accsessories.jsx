@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 const Accsessories = () => {
     return (
         <div>
@@ -8,7 +7,6 @@ const Accsessories = () => {
         </div>
     )
 }
-
 
 
 export default Accsessories

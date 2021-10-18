@@ -17,7 +17,6 @@ export const productModalSlice = createSlice({
     },
 })
 
-// Action creators are generated for each case reducer function
 export const { set, remove } = productModalSlice.actions
 
 export default productModalSlice.reducer
