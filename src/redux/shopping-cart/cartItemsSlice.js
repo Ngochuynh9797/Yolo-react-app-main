@@ -28,14 +28,10 @@ export const cartItemsSlice = createSlice({
                     {
                         ...newItem,
                         id: state.value.length >0 ? state.value[state.value.length -1].id +1:1
-                    }
-                    
+                    }     
                 ]
             }
             localStorage.setItem('cartItems', JSON.stringify(sortItems(state.value)))
-            
-        
-        
         },
         updateItem : (state, action) => {
             const itemUpdate = action.payload
@@ -48,19 +44,16 @@ export const cartItemsSlice = createSlice({
                     ...state.value,
                     {
                         ...itemUpdate,
-                        id: item[0].id,
-                        
+                        id: item[0].id,  
                     }
                 ]
                 localStorage.setItem('cartItems', JSON.stringify(sortItems(state.value)))
             }
-           
         },
         removeItem:(state, action) => {
             const deletedItem = action.payload;
             state.value = delItem(state.value, deletedItem)
         }
-
     }
 }
 )

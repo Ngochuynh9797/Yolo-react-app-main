@@ -3,12 +3,10 @@ import Helmet from '../components/Helmet';
 import CheckBox from '../components/CheckBox';
 import Button from '../components/button';
 import InfinityList from '../components/InfinityList';
-
 import productData from '../assest/fakeData/products';
 import category from '../assest/fakeData/category';
 import colors from '../assest/fakeData/product-color';
 import size from '../assest/fakeData/product-size';
-
 
 const Catalog = () => {
 
@@ -89,7 +87,6 @@ const Catalog = () => {
         setProducts(temp)
     },[filter, productList])
     
-
     useEffect(()=>{
         updateProducts()
     }, [updateProducts])
@@ -100,7 +97,6 @@ const Catalog = () => {
 
     return (
         <Helmet title={`Sản phẩm`}>
-         
             <div className="catalog">
                 <div className="catalog__filter" ref={filterRef}>
                     <div className="catalog__filter__close" >
@@ -171,7 +167,6 @@ const Catalog = () => {
                 </div>
             </div>
         </Helmet>
-
     )
 };
 

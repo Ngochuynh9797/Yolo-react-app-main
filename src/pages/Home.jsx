@@ -10,9 +10,6 @@ import { Link } from 'react-router-dom';
 import productData from '../assest/fakeData/products'
 import ProductCard from '../components/ProductCard';
 import banner from '../assest/images/Slider/banner.png'
- 
-
-
 
 const Home = () => {
     return (
@@ -32,7 +29,6 @@ const Home = () => {
                         smCol={1}
                         gap={10}
                     >
-
                         {
                             policy.map((item, index) =>
                                 <Link to='/policy'  key={index}>
@@ -48,9 +44,7 @@ const Home = () => {
                     </Grid>
                 </SectionBody>
             </Section>
-
             <Section>
-
                 <SectionTitle> Top sản phẩm bán chạy trong tuần</SectionTitle>
                 <SectionBody>
                     <Grid
@@ -68,13 +62,11 @@ const Home = () => {
                                     price={Number(item.price)}
                                     slug={item.slug}
                                 />
-
                             )
                         }
                     </Grid>
                 </SectionBody>
             </Section>
-        
             <Section>
                 <SectionTitle> Sản phẩm mới</SectionTitle>
                 <SectionBody>
@@ -98,7 +90,6 @@ const Home = () => {
                     </Grid>
                 </SectionBody>
             </Section>
-
            <Section>
                <SectionBody>
                    <Link to ="/catalog">
@@ -106,9 +97,7 @@ const Home = () => {
                    </Link>
                </SectionBody>
              </Section>             
-        
         </Helmet>
-
     )
 };
 

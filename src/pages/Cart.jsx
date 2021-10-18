@@ -6,19 +6,19 @@ import productData from '../assest/fakeData/products';
 import { useSelector } from 'react-redux';
 import {numberWithCommas} from '../utils/numberWithCommas'
 import { Link } from 'react-router-dom';
+
  const Cart = () => {
      const cartItems = useSelector((state) => state.cartItems.value)
-    
      const [cartProducts, setCartProducts] = useState([])
      const [totalProducts, setTotalProducts] = useState(0)
      const [totalPrice, setTotalPrice] = useState(0)
+
      useEffect(() => {
        setCartProducts(productData.getCartItemsInfo(cartItems))
        setTotalProducts(cartItems.reduce((total, item) => total + Number(item.quantity),0) )
        setTotalPrice(cartItems.reduce((total, item) => total + Number(item.price)*Number(item.quantity),0))
      }, [cartItems])
    
-    
      return (
          <Helmet title="Giỏ hàng
          ">
@@ -47,8 +47,7 @@ import { Link } from 'react-router-dom';
                       
                        cartProducts.map((item,index) => { 
                        console.log(item)
-                        return <CartItem key ={index} item={item}/>})
-                       
+                        return <CartItem key ={index} item={item}/>})  
                    }
                </div>
            </div>
